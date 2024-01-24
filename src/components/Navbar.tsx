@@ -8,153 +8,92 @@ import {
 
 const Navbar: React.FC = () => {
   return (
-    <header className="main-header">
-      {/* Start Navigation */}
-      <nav className="bg-light">
-        <div className="container mx-auto">
-          {/* Start Header Navigation */}
-          <div className="flex items-center justify-between py-2">
-            <button
-              className="text-xl text-gray-800 lg:hidden"
-              type="button"
-              // You can add an onClick handler here if needed
-            >
-              <FontAwesomeIcon icon={faBars} />
-            </button>
-            <a className="text-lg text-gray-800" href="index.html">
-              <img src="images/logo.png" className="h-8" alt="" />
-            </a>
-          </div>
-          {/* End Header Navigation */}
-
-          {/* Collect the nav links, forms, and other content for toggling */}
-          <div className="hidden lg:flex lg:items-center lg:ml-auto">
-            <ul className="flex space-x-4">
-              <li className="nav-item active">
-                <a
-                  className="text-gray-800 hover:text-gray-600"
-                  href="index.html"
-                >
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="text-gray-800 hover:text-gray-600"
-                  href="about.html"
-                >
-                  About Us
-                </a>
-              </li>
-              <li className="dropdown relative">
-                <a href="#" className="text-gray-800 hover:text-gray-600">
-                  SHOP
-                </a>
-                <ul className="dropdown-menu absolute hidden space-y-2">
-                  <li>
-                    <a href="shop.html">Sidebar Shop</a>
-                  </li>
-                  <li>
-                    <a href="shop-detail.html">Shop Detail</a>
-                  </li>
-                  <li>
-                    <a href="cart.html">Cart</a>
-                  </li>
-                  <li>
-                    <a href="checkout.html">Checkout</a>
-                  </li>
-                  <li>
-                    <a href="my-account.html">My Account</a>
-                  </li>
-                  <li>
-                    <a href="wishlist.html">Wishlist</a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="text-gray-800 hover:text-gray-600"
-                  href="gallery.html"
-                >
-                  Gallery
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="text-gray-800 hover:text-gray-600"
-                  href="contact-us.html"
-                >
-                  Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* /.navbar-collapse */}
-
-          {/* Start Atribute Navigation */}
-          <div className="hidden lg:flex lg:items-center">
-            <ul className="flex space-x-4">
-              <li className="search">
-                <a href="#" className="text-gray-800 hover:text-gray-600">
-                  <FontAwesomeIcon icon={faSearch} />
-                </a>
-              </li>
-              <li className="side-menu">
-                <a href="#" className="text-gray-800 hover:text-gray-600">
-                  <FontAwesomeIcon icon={faShoppingBag} />
-                  <span className="badge">3</span>
-                  <p>My Cart</p>
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* End Atribute Navigation */}
-        </div>
-        {/* Start Side Menu */}
-        <div className="hidden lg:flex lg:items-center">
-          <div className="side">
-            <a href="#" className="close-side">
-              <i className="fa fa-times"></i>
-            </a>
-            <li className="cart-box">
-              <ul className="cart-list space-y-2">
-                <li>
-                  <a href="#" className="photo">
-                    <img
-                      src="images/img-pro-01.jpg"
-                      className="cart-thumb"
-                      alt=""
-                    />
-                  </a>
-                  <h6>
-                    <a href="#" className="text-gray-800 hover:text-gray-600">
-                      Delica omtantur
-                    </a>
-                  </h6>
-                  <p>
-                    1x - <span className="price">$80.00</span>
-                  </p>
-                </li>
-                {/* Repeat the structure for other cart items */}
-                <li className="total">
-                  <a
-                    href="#"
-                    className="btn btn-default hvr-hover btn-cart text-gray-800 hover:text-gray-600"
-                  >
-                    VIEW CART
-                  </a>
-                  <span className="float-right text-gray-800 hover:text-gray-600">
-                    <strong>Total</strong>: $180.00
-                  </span>
-                </li>
-              </ul>
+    <nav className="bg-white border-gray-200 dark:bg-gray-900">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a
+          href="https://flowbite.com/"
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img
+            src="https://flowbite.com/docs/images/logo.svg"
+            className="h-8"
+            alt="Flowbite Logo"
+          />
+          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            Flowbite
+          </span>
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span className="sr-only">Open main menu</span>
+          <svg
+            className="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+              <a
+                href="#"
+                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                aria-current="page"
+              >
+                Home
+              </a>
             </li>
-          </div>
+            <li>
+              <a
+                href="#"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
         </div>
-        {/* End Side Menu */}
-      </nav>
-      {/* End Navigation */}
-    </header>
+      </div>
+    </nav>
   );
 };
 
