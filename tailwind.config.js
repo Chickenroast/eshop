@@ -4,9 +4,11 @@ export default {
   theme: {
     extend: {},
     colors: {
-      greenaction: "#1AC67F",
-      back: "#EBEBEB",
-      green: "#404040",
+      primary: "#E6A4B4",
+      back: "#F5EEE6",
+      secondary: "#F3D7CA",
+      black: "#000000",
+      white: "#FFFFFF",
     },
   },
   plugins: [],
