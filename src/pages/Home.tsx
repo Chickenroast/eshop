@@ -1,42 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import "../App.css";
-import Plates from "../Svg/Plates";
+import Plates from "../Svg/Plate";
 import { gsap } from "gsap";
 
 function Home() {
+  useEffect(() => {
+    const maskStyle: React.CSSProperties = {
+      maskType: "luminance",
+    };
+    gsap.to(".plates", { rotate: 360, duration: 3 });
+  }, []); // Le tableau vide [] signifie que ce useEffect ne s'exécutera qu'une seule fois, lors du montage initial du composant
+
   const maskStyle: React.CSSProperties = {
     maskType: "luminance",
   };
-  gsap.to(".plates", { y: +30, duration: 0.5 });
-  gsap.to(".plates2", { y: +30, duration: 2, delay: 0.5 });
 
   return (
-    <div className="h-screen w-full bg-back">
+    <div className="h-screen w-full bg-back overflow-hidden">
       <Navbar />
       <section className="mt-[20%] flex flex-col h-screen">
         <h1 className="ml-5 font-bold text-6xl text-primary text-left">
-          I EAT MY
+          TOUT SE
         </h1>
-        <h2 className="ml-5 font-bold text-6xl text-white text-left">DISHES</h2>
+        <h2 className="ml-5 font-bold text-6xl text-white text-left">MANGE</h2>
         <p className="mt-5 ml-5 text-primary text-left">
           Taste the joy of edible potato plates on our site! From savory
           pancakes to crispy hash browns, we offer mouthwatering options crafted
           with care.
         </p>
         <button className="mt-5 ml-5 rounded-full bg-primary p-3 text-white w-40">
-          Start shopping
+          View Products
         </button>
-        <div className="mt-[-10%] flex flex-col ml-[30%]">
-          <div className="plates mb-[-10%] z-40">
-            <Plates style={maskStyle} />
-          </div>
-          <div className="plates2 mb-[-30%] z-30 rotate-12">
-            <Plates style={maskStyle} />
-          </div>
-          <div className="rotate-[25deg] mt-[50px]">
-            <Plates style={maskStyle} />
-          </div>
+
+        <div className="plates fixed top-[50%] z-40 ">
+          <Plates style={maskStyle} />
         </div>
       </section>
     </div>
