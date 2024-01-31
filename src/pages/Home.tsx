@@ -10,7 +10,7 @@ function Home() {
       maskType: "luminance",
     };
     gsap.to(".plates", { rotate: 360, duration: 3 });
-  }, []); // Le tableau vide [] signifie que ce useEffect ne s'exécutera qu'une seule fois, lors du montage initial du composant
+  }, []);
 
   const maskStyle: React.CSSProperties = {
     maskType: "luminance",

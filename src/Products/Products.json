@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Betassiette",
+    "description": "Une assiette comestible à base de betterave, vegan et fairtrade, pour une expérience culinaire durable et savoureuse.",
+    "price": 6.99,
+    "promo": false,
+    "image": "2.jpg",
+    "category": "Catégorie 1",
+    "quantity": 0
+  },
+  {
+    "title": "Pomassiette",
+    "description": "Une assiette comestible à base de pomme, vegan et fairtrade, pour une touche de fraîcheur et de santé à votre repas.",
+    "price": 3.99,
+    "promo": true,
+    "image": "3.jpg",
+    "category": "Catégorie 2",
+    "quantity": 0
+  },
+  {
+    "title": "Classicassiette",
+    "description": "Une assiette comestible classique au pain, vegan et fairtrade, pour une expérience gastronomique authentique et respectueuse de l'environnement.",
+    "price": 6.99,
+    "promo": false,
+    "image": "1.jpg",
+    "category": "Catégorie 1",
+    "quantity": 0
+  },
+  {
+    "title": "Pomcuillere",
+    "description": "Une cuillère comestible à base de pomme, vegan et fairtrade, pour une touche d'originalité et de durabilité à votre dégustation.",
+    "price": 1.99,
+    "promo": true,
+    "image": "9.jpg",
+    "category": "Catégorie 2",
+    "quantity": 0
+  },
+  {
+    "title": "Betracuillere",
+    "description": "Une cuillère comestible à base de betterave, vegan et fairtrade, pour une alternative écologique et gourmande à la vaisselle traditionnelle.",
+    "price": 1.99,
+    "promo": false,
+    "image": "8.jpg",
+    "category": "Catégorie 1",
+    "quantity": 0
+  },
+  {
+    "title": "Classicocuillere",
+    "description": "Une cuillere croquante, vegan et fairtrade, pour une expérience culinaire ludique et éthique, sans compromis sur le goût et la qualité.",
+    "price": 1.99,
+    "promo": false,
+    "image": "7.jpg",
+    "category": "Catégorie 2",
+    "quantity": 0
+  }
+]

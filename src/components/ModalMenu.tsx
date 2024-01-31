@@ -9,6 +9,14 @@ const Modal = ({ isOpen, onClose }) => {
         <h2 className="text-4xl font-bold mb-4 text-left">Notre Menu</h2>
         <ul className="flex flex-col space-y-6 text-2xl text-left mt-10 hover:text-black">
           <li>
+            <a href="#" onClick={onClose}>
+              / Home
+            </a>
+            <p className="text-sm">
+              trouve tout nos produits, et achète les en ligne.
+            </p>
+          </li>
+          <li>
             <a href="#/about" onClick={onClose}>
               / About
             </a>
@@ -17,17 +25,18 @@ const Modal = ({ isOpen, onClose }) => {
               certifié vegan.
             </p>
           </li>
-          <li>
-            <a href="#" onClick={onClose}>
-              / Shop
-            </a>
-            <p className="text-sm">
-              trouve tout nos produits, et achète les en ligne.
-            </p>
-          </li>
+
           <li>
             <a href="#" onClick={onClose}>
               / Blog
+            </a>
+            <p className="text-sm">
+              partage tes recettes, et découvre celle des autres.
+            </p>
+          </li>
+          <li>
+            <a href="#/shop" onClick={onClose}>
+              / Shop
             </a>
             <p className="text-sm">
               partage tes recettes, et découvre celle des autres.
