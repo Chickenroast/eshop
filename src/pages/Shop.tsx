@@ -85,11 +85,11 @@ function Shop() {
     <div className="h-full w-full bg-back">
       <Navbar />
       <section className="mt-[20%] flex flex-col h-full">
-        <h1 className="ml-5 font-bold text-6xl text-primary text-left mb-5">
+        <h1 className="ml-5 font-bold lg:mr-[3%] text-6xl text-primary text-left mb-5">
           SHOP
         </h1>
         <button
-          className="fixed mt-5 right-2 rounded-full bg-primary p-3 text-white w-40"
+          className="absolute mt-3 lg:right-[3%] right-2 rounded-full bg-primary p-3 text-white w-40"
           onClick={openModal} // Open modal when button is clicked
         >
           panier
@@ -107,10 +107,10 @@ function Shop() {
         </div>
         {/* Modal */}
         {showModal && (
-          <div className="fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-50 flex justify-center items-center">
-            <div className="bg-white p-8 rounded-lg h-full w-full">
+          <div className="lg:h-full lg:w-full lg:absolute fixed top-0 left-0 w-screen h-screen bg-gray-800 bg-opacity-50 flex justify-center items-center">
+            <div className="bg-gradient-to-b from-backlight-light to-backlight p-8 rounded-lg h-full w-full">
               <button
-                className="text-xl font-bold rounded-full p-3 py-2 bg-primary text-white flex justify-right"
+                className="lg:absolute lg:w-20 text-xl font-bold rounded-full p-3 py-2 bg-primary text-white flex justify-right lg:fixed lg:left-[3%] lg:top-[5%]"
                 onClick={closeModal}
               >
                 <FontAwesomeIcon icon={faTimes} />
@@ -121,11 +121,6 @@ function Shop() {
                 addItemToCart={addItemToCart}
                 updateCartItemQuantity={updateCartItemQuantity}
               />
-              <div className="text-center mt-4">
-                <p className="text-xl font-bold">
-                  Total Price: ${formatFloatNumber(totalPrice)}
-                </p>
-              </div>
             </div>
           </div>
         )}

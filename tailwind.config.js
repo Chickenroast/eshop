@@ -6,6 +6,10 @@ export default {
     colors: {
       primary: "#E6A4B4",
       back: "#F5EEE6",
+      backlight: {
+        light: "#F5F5F5",
+        DEFAULT: "#E8E8E8",
+      },
       secondary: "#F3D7CA",
       black: "#000000",
       white: "#FFFFFF",
