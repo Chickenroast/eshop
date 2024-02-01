@@ -6,6 +6,9 @@ import ProductItem from "../Products/ProductItem";
 import Cart from "../components/Cart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import ShopBan from "../components/ShopBan";
+
+import { CartItemData as CartItem } from "../components/Cart";
 
 interface Product {
   title: string;
@@ -18,26 +21,13 @@ interface Product {
 }
 
 function Shop() {
-  interface CartItem extends Product {
-    quantity: number;
-  }
-
   const [products, setProducts] = useState<Product[]>([]);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  const [showModal, setShowModal] = useState(false); // State to control modal visibility
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     setProducts(productsData);
   }, []);
-
-  useEffect(() => {
-    // Recalculate total price whenever cartItems change
-    const totalPrice = cartItems.reduce(
-      (total, item) => total + item.price * item.quantity,
-      0
-    );
-    setTotalPrice(totalPrice);
-  }, [cartItems]);
 
   const addItemToCart = (product: Product, quantity: number) => {
     const itemExists = cartItems.find((item) => item.title === product.title);
@@ -55,24 +45,6 @@ function Shop() {
     }
   };
 
-  const updateCartItemQuantity = (title: string, quantity: number) => {
-    setCartItems(
-      cartItems.map((item) =>
-        item.title === title ? { ...item, quantity } : item
-      )
-    );
-  };
-
-  const [totalPrice, setTotalPrice] = useState<number>(0);
-
-  const formatFloatNumber = (num: number): string => {
-    const roundedNum = parseFloat(num.toFixed(2));
-    return roundedNum.toLocaleString("en-US", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
-  };
-
   const openModal = () => {
     setShowModal(true);
   };
@@ -84,6 +56,9 @@ function Shop() {
   return (
     <div className="h-full w-full bg-back">
       <Navbar />
+      <div className="hidden lg:block mt-10 mb-[-20%]">
+        <ShopBan />
+      </div>
       <section className="mt-[20%] flex flex-col h-full">
         <h1 className="ml-5 font-bold lg:mr-[3%] text-6xl text-primary text-left mb-5">
           SHOP
@@ -118,8 +93,13 @@ function Shop() {
 
               <Cart
                 cartItems={cartItems}
-                addItemToCart={addItemToCart}
-                updateCartItemQuantity={updateCartItemQuantity}
+                updateCartItemQuantity={(title, quantity) =>
+                  setCartItems((prevCartItems) =>
+                    prevCartItems.map((item) =>
+                      item.title === title ? { ...item, quantity } : item
+                    )
+                  )
+                }
               />
             </div>
           </div>

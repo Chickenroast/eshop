@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import "../App.css";
-import Plates from "../Svg/Plate";
+import Plates1 from "../Svg/Plate";
 import { gsap } from "gsap";
 
 function Home() {
@@ -34,7 +34,7 @@ function Home() {
         </button>
 
         <div className="plates fixed top-[50%] z-40 ">
-          <Plates style={maskStyle} />
+          <Plates1 style={maskStyle} />
         </div>
       </section>
     </div>
