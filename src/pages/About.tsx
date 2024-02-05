@@ -12,7 +12,6 @@ import {
   faLeaf,
   faSeedling,
   faUtensils,
-  faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
 function About() {
   const maskStyle: React.CSSProperties = {

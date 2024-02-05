@@ -1,8 +1,5 @@
-import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import "../App.css";
-import Plates1 from "../Svg/Plate";
-import { gsap } from "gsap";
 
 function Blog() {
   return (

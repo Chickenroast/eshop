@@ -1,6 +1,4 @@
-import React from "react";
-
-const Pomme = (props: React.SVGProps<SVGSVGElement>) => {
+const Pomme = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

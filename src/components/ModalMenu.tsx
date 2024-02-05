@@ -1,6 +1,11 @@
 import React from "react";
 
-const Modal = ({ isOpen, onClose }) => {
+interface ModalProps {
+  isOpen?: boolean;
+  onClose: () => void;
+}
+
+const Modal: React.FC<ModalProps> = ({ isOpen = false, onClose }) => {
   if (!isOpen) return null;
 
   return (
@@ -9,17 +14,13 @@ const Modal = ({ isOpen, onClose }) => {
         <h2 className="text-4xl font-bold mb-4 text-left">Notre Menu</h2>
         <ul className="flex flex-col space-y-6 text-2xl text-left mt-10 hover:text-black">
           <li>
-            <a href="#" onClick={onClose}>
-              / Home
-            </a>
+            <a href="#">/ Home</a>
             <p className="text-sm">
               trouve tout nos produits, et achète les en ligne.
             </p>
           </li>
           <li>
-            <a href="#/about" onClick={onClose}>
-              / About
-            </a>
+            <a href="#/about">/ About</a>
             <p className="text-sm">
               trouve de quoi est fait notre produit, produits naturels et
               certifié vegan.
@@ -27,17 +28,13 @@ const Modal = ({ isOpen, onClose }) => {
           </li>
 
           <li>
-            <a href="#/blog" onClick={onClose}>
-              / Blog
-            </a>
+            <a href="#/blog">/ Blog</a>
             <p className="text-sm">
               partage tes recettes, et découvre celle des autres.
             </p>
           </li>
           <li>
-            <a href="#/shop" onClick={onClose}>
-              / Shop
-            </a>
+            <a href="#/shop">/ Shop</a>
             <p className="text-sm">
               partage tes recettes, et découvre celle des autres.
             </p>

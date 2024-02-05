@@ -7,9 +7,6 @@ import Spoon from "../Svg/Spoon";
 
 function Home() {
   useEffect(() => {
-    const maskStyle: React.CSSProperties = {
-      maskType: "luminance",
-    };
     gsap.to(".plates", { rotate: 360, duration: 2 });
     gsap.fromTo(
       ".spoon",

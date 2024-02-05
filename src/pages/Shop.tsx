@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Navbar from "../components/Navbar";
 import "../App.css";
 import productsData from "../Products/Products.json";
@@ -6,7 +6,6 @@ import ProductItem from "../Products/ProductItem";
 import Cart from "../components/Cart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import ShopBan from "../components/ShopBan";
 import gsap from "gsap";
 import { CartItemData as CartItem } from "../components/Cart";
 import ProductFilter from "../components/ProductFilter";
