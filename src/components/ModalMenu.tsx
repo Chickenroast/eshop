@@ -27,12 +27,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen = false, onClose }) => {
             </p>
           </li>
 
-          <li>
+          {/* <li>
             <a href="#/blog">/ Blog</a>
             <p className="text-sm">
               partage tes recettes, et découvre celle des autres.
             </p>
-          </li>
+          </li> */}
           <li>
             <a href="#/shop">/ Shop</a>
             <p className="text-sm">

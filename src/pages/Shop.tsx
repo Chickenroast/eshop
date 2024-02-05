@@ -90,11 +90,11 @@ function Shop() {
   }, []); // Utilise une dépendance vide pour exécuter le code une seule fois
 
   return (
-    <div className="h-screen w-full mb-20 bg-back">
+    <div className="h-full w-full mb-20 bg-back">
       <div className="lg:z-40 lg:fixed lg:w-[95%]">
         <Navbar />
       </div>
-      <section className="h-fit scaling-section6 mt-[5%] lg:mx-8 lg:mt-[0%] flex flex-col  h-full lg:bg-white lg:p-10 lg:rounded-md lg:shadow-md">
+      <section className="lg:h-fit  scaling-section6 mt-[5%] lg:mx-8 lg:mt-[0%] flex flex-col  h-full lg:bg-white lg:p-10 lg:rounded-md lg:shadow-md">
         <div className="lg:flex-row lg:flex lg:justify-between lg:mt-4">
           <div className="hidden lg:block">
             <ProductFilter
