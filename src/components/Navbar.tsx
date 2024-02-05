@@ -22,6 +22,20 @@ const Navbar: React.FC = () => {
           <Logo />
           <h2 className="self-center text-2xl font-semibold">Crockplate</h2>
         </div>
+        <div className="hidden md:flex flex-grow justify-center space-x-4">
+          <a href="#/" className="text-lg hover:text-gray-200">
+            Home
+          </a>
+          <a href="#/about" className="text-lg hover:text-gray-200">
+            About
+          </a>
+          {/* <a href="#/blog" className="text-lg hover:text-gray-200">
+            Blog
+          </a> */}
+          <a href="#/shop" className="text-lg hover:text-gray-200">
+            Shop
+          </a>
+        </div>
         <button
           type="button"
           onClick={toggleMenu}

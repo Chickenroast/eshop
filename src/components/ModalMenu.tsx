@@ -27,7 +27,7 @@ const Modal = ({ isOpen, onClose }) => {
           </li>
 
           <li>
-            <a href="#" onClick={onClose}>
+            <a href="#/blog" onClick={onClose}>
               / Blog
             </a>
             <p className="text-sm">

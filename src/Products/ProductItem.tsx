@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Product from "../components/Types/Product";
+import gsap from "gsap";
 
 interface ProductItemProps {
   product: Product;
@@ -9,6 +10,7 @@ interface ProductItemProps {
 const ProductItem: React.FC<ProductItemProps> = ({ product, addToCart }) => {
   const [selectedQuantity, setSelectedQuantity] = useState(1);
   const [errorMessage, setErrorMessage] = useState("");
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const handleQuantityChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = Number(event.target.value);
@@ -20,11 +22,24 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, addToCart }) => {
     }
   };
 
+  const handleClick = () => {
+    // GSAP animation
+    gsap.to(buttonRef.current, {
+      scale: 1.2, // Scale up to 1.2
+      duration: 0.1, // Animation duration
+      yoyo: true, // Play animation in reverse
+      repeat: 1, // Repeat animation once
+    });
+
+    // Call addToCart function
+    addToCart(product, selectedQuantity);
+  };
+
   return (
     <div className="bg-white p-4 rounded-lg shadow-md">
       <div className="flex mb-4 self-end">
         {product.promo && (
-          <span className=" bg-primary text-white ml-1 px-2 py-1 rounded-md">
+          <span className="lg:absolute bg-primary text-white ml-1 px-2 py-1 rounded-md">
             Promotion
           </span>
         )}
@@ -63,8 +78,9 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, addToCart }) => {
       </div>
       <div className="flex justify-between items-center">
         <button
-          className="bg-primary text-white px-4 py-2 rounded-md"
-          onClick={() => addToCart(product, selectedQuantity)}
+          ref={buttonRef}
+          className=" bg-primary text-white px-4 py-2 rounded-md"
+          onClick={handleClick}
         >
           Add to Cart
         </button>

@@ -31,11 +31,11 @@ const Cart: React.FC<CartProps> = ({ cartItems, updateCartItemQuantity }) => {
   }, [cartItems]);
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md lg:min-h-64">
+    <div className="bg-white p-6 rounded-lg shadow-md lg:min-h-64 lg:mb-0 mb-20">
       <h2 className="text-2xl font-bold mb-4 lg:text-4xl lg:text-right">
         Shopping Cart
       </h2>
-      <div className="lg:absolute hidden lg:block border-b text-primary w-80 fixed right-[3%] pb-4"></div>
+      <div className="lg:block lg:fixed mt-4 lg:mr-5 hidden border-b text-primary w-80 fixed right-[3%] pb-4"></div>
       <div className="grid grid-cols-1 gap-4 ">
         {cartItems
           .filter((item) => item.quantity > 0)
@@ -101,11 +101,10 @@ const Cart: React.FC<CartProps> = ({ cartItems, updateCartItemQuantity }) => {
             </div>
           ))}
       </div>
-      <div className="mt-4">
-        <h3 className="lg:absolute text-xl font-semibold lg:fixed lg:top-[12%] lg:right-[3%]">
-          Total Price: ${totalPrice.toFixed(2)}
-        </h3>
-      </div>
+
+      <h3 className="mt-4 lg:right-[5%] text-xl font-semibold lg:absolute lg:top-[20%] lg:right-[3%]">
+        Total Price: ${totalPrice.toFixed(2)}
+      </h3>
     </div>
   );
 };
