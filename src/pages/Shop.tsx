@@ -72,7 +72,7 @@ function Shop() {
 
   const closeModal = () => {
     setShowModal(false);
-    document.body.style.overflow = "";
+    document.body.style.overflow = "auto";
   };
   useEffect(() => {
     gsap.fromTo(
@@ -90,30 +90,30 @@ function Shop() {
   }, []); // Utilise une dépendance vide pour exécuter le code une seule fois
 
   return (
-    <div className="h-full w-full mb-20 bg-back">
+    <div className="h-full w-full mb-20 bg-back ">
       <div className="lg:z-40 lg:fixed lg:w-[95%]">
         <Navbar />
       </div>
-      <section className="lg:h-fit  scaling-section6 mt-[5%] lg:mx-8 lg:mt-[0%] flex flex-col  h-full lg:bg-white lg:p-10 lg:rounded-md lg:shadow-md">
-        <div className="lg:flex-row lg:flex lg:justify-between lg:mt-4">
+      <section className="lg:h-fit scaling-section6 mt-[5%] lg:mx-8 lg:mt-[0%] flex flex-col  h-full lg:bg-white lg:bg-opacity-50 lg:p-10 lg:rounded-md lg:shadow-md">
+        <div className="lg:flex-row lg:flex lg:justify-between lg:mt-4 ">
           <div className="hidden lg:block">
             <ProductFilter
               products={products}
               setFilteredProducts={setProducts}
             />{" "}
           </div>
-          <h1 className="ml-2 font-bold lg:mr-[3%] text-6xl text-primary text-left mb-5">
+          <h1 className="ml-2 font-bold lg:mr-[3%] text-6xl text-pink text-left mb-5">
             DE LA VAISELLE COMESTIBLE
           </h1>
           <button
             ref={cartButtonRef}
-            className="hover:bg-secondary lg:mr-5 absolute top-[1%] lg:static lg:h-[40px] right-7 rounded-full bg-primary p-2 text-white w-[25%] lg:w-40 flex items-center justify-center"
+            className="hover:bg-pink lg:mr-5 absolute top-[1%] lg:static lg:h-[40px] right-7 rounded-full bg-primary p-2 text-white w-[25%] lg:w-40 flex items-center justify-center"
             onClick={openModal} // Open modal when button is clicked
           >
             panier ({cartItemCount}) {/* Display total items in cart */}
           </button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ">
           {products.map((product, index) => (
             <ProductItem
               key={index}

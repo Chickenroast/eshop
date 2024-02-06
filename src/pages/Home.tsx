@@ -25,21 +25,22 @@ function Home() {
   };
 
   return (
-    <div className="h-screen w-full bg-back overflow-hidden">
+    <div className="h-screen w-full bg-back">
       <Navbar />
-      <section className="mt-[20%] flex flex-col h-screen lg:mt-[2%]">
-        <h1 className="lg:text-[180px] ml-5 font-bold text-6xl text-primary text-left">
+
+      <section className="mt-[5%] flex flex-col h-screen lg:mt-[2%]">
+        <h1 className="lg:text-[180px] ml-5 font-bold text-6xl text-pink text-left">
           TOUT SE
         </h1>
-        <h2 className="ml-5 font-bold text-6xl text-white text-left lg:text-[180px]">
+        <h2 className="ml-5 font-bold text-6xl text-pink text-left lg:text-[180px]">
           MANGE
         </h2>
-        <p className="mt-5 ml-5 text-primary text-left lg:w-[50%] lg:text-[150%]">
+        <p className="mt-5 ml-5 text-pink text-left lg:w-[50%] lg:text-[150%] lg:ml-8">
           Taste the joy of edible potato plates on our site! From savory
           pancakes to crispy hash browns, we offer mouthwatering options crafted
           with care.
         </p>
-        <button className="mt-5 ml-5 rounded-full bg-primary p-3 text-white w-40">
+        <button className="mt-5 ml-5 hover:bg-pink rounded-full bg-primary p-3 text-white w-40">
           <a href="#/shop">View Products</a>
         </button>
 

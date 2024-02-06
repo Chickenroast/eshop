@@ -16,24 +16,24 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-primary rounded-full text-back">
+    <nav className="bg-pink rounded-full text-back">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex space-x-3 rtl:space-x-reverse">
           <Logo />
           <h2 className="self-center text-2xl font-semibold">Crockplate</h2>
         </div>
-        <div className="hidden md:flex flex-grow justify-center space-x-4">
-          <a href="#/" className="text-lg hover:text-gray-200">
+        <div className="hidden ml-[10%] md:flex flex-grow justify-left space-x-10">
+          <a href="#/" className="text-xl hover:text-secondary">
             Home
           </a>
-          <a href="#/about" className="text-lg hover:text-gray-200">
-            About
+          <a href="#/about" className="text-xl hover:text-secondary">
+            / About
           </a>
           {/* <a href="#/blog" className="text-lg hover:text-gray-200">
             Blog
           </a> */}
-          <a href="#/shop" className="text-lg hover:text-gray-200">
-            Shop
+          <a href="#/shop" className="text-xl hover:text-secondary">
+            / Shop
           </a>
         </div>
         <button

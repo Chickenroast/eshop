@@ -39,7 +39,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, addToCart }) => {
     <div className="bg-white p-4 rounded-lg shadow-md">
       <div className="flex mb-4 self-end">
         {product.promo && (
-          <span className="lg:absolute bg-primary text-white ml-1 px-2 py-1 rounded-md">
+          <span className="lg:absolute bg-secondary text-white ml-1 px-2 py-1 rounded-md">
             Promotion
           </span>
         )}
@@ -79,7 +79,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, addToCart }) => {
       <div className="flex justify-between items-center">
         <button
           ref={buttonRef}
-          className=" bg-primary text-white px-4 py-2 rounded-md"
+          className=" bg-primary hover:bg-pink text-white px-4 py-2 rounded-md"
           onClick={handleClick}
         >
           Add to Cart

@@ -4,6 +4,8 @@ export default {
   theme: {
     extend: {},
     colors: {
+      pink: "#944E63",
+      pinkdark: "#6E3A4E",
       primary: "#E6A4B4",
       back: "#F5EEE6",
       backlight: {

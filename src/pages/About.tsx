@@ -125,13 +125,13 @@ function About() {
             <Kids style={maskStyle} />
           </div>
           <section className="lg:left-[30%] lg:w-[80%] lg:top-[50%] right-[50%] absolute z-40 top-[10%] scaling-section">
-            <h1 className="mt-5 font-bold text-6 text-left mx-1 text-primary">
+            <h1 className="mt-5 font-bold text-6 text-left mx-1 text-pink">
               kids friendly
             </h1>
-            <h2 className="font-bold text-6xl text-left text-primary">
+            <h2 className="font-bold text-6xl text-left text-pink">
               PAS DE VAISSELLE POUR LES PARENTS
             </h2>
-            <p className="hidden ml-2 lg:block w-[35%] mt-2 font-bold text-sm text-left text-primary">
+            <p className="hidden ml-2 lg:block w-[35%] mt-2 font-bold text-sm text-left text-pink">
               Dites adieu aux corvées de vaisselle avec la vaisselle comestible
               ! Cette solution écologique simplifie notre quotidien en réduisant
               les déchets plastiques tout en ajoutant une touche de plaisir à
@@ -139,7 +139,7 @@ function About() {
               la dernière bouchée, y compris votre vaisselle !
             </p>
             <button
-              className="fixed mt-5 left-2 rounded-full bg-primary p-3 text-white w-40"
+              className="fixed mt-5 left-2 rounded-full bg-primary hover:bg-pink p-3 text-white w-40"
               onClick={toggleSecondDiv}
             >
               De quoi c'est fait?
@@ -153,14 +153,14 @@ function About() {
             <Kids style={maskStyle} />
           </div>
           <section className="z-40 lg:left-[50%] absolute z-40 top-[50%] scaling-section">
-            <h1 className="mt-4 lg:mt-5 font-bold text-6 text-left lg:text-right mr-12 text-primary">
+            <h1 className="mt-4 lg:mt-5 font-bold text-6 text-left lg:text-right mr-12 text-pink">
               Que trois ingrédients!
             </h1>
-            <h2 className="font-bold text-6xl lg:text-right text-left mr-10 text-primary">
+            <h2 className="font-bold text-6xl lg:text-right text-left mr-10 text-pink">
               DES PRODUITS VEGAN
             </h2>
 
-            <ul className="lg:mt-[5%] lg:text-left md:text-right md:mr-10 mt-2 font-bold text-2xl text-left text-primary">
+            <ul className="lg:mt-[5%] lg:text-left md:text-right md:mr-10 mt-2 font-bold text-2xl text-left text-pink">
               <li className="mb-2">
                 <FontAwesomeIcon icon={faUtensils} className="mr-2" /> Sel
               </li>
@@ -174,7 +174,7 @@ function About() {
             </ul>
           </section>
           <button
-            className="fixed lg:left-[5%] z-40 mt-5 left-4 hover:bg-secondary rounded-full bg-primary p-3 text-white w-40"
+            className="fixed lg:left-[5%] z-40 mt-5 left-4 hover:bg-pink rounded-full bg-primary p-3 text-white w-40"
             onClick={returnToFirstDiv}
           >
             revenir

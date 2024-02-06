@@ -7,7 +7,7 @@ export default defineConfig({
   base: "/eshop/",
   build: {
     outDir: "dist",
-    chunkSizeWarningLimit: 5000000,
+    chunkSizeWarningLimit: 500000,
     rollupOptions: {
       output: {
         manualChunks: {

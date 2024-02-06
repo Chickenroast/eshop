@@ -46,9 +46,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen = false, onClose }) => {
         >
           Close
         </button>
-        <button className="mt-10 mr-80 rounded-full bg-secondary p-3 text-black w-40">
+        {/* <button className="mt-10 mr-80 rounded-full bg-secondary p-3 text-black w-40">
           Login
-        </button>
+        </button> */}
       </div>
     </div>
   );
