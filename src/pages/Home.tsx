@@ -7,17 +7,21 @@ import Spoon from "../Svg/Spoon";
 
 function Home() {
   useEffect(() => {
-    gsap.to(".plates", { rotate: 360, duration: 2 });
-    gsap.fromTo(
-      ".spoon",
-      { x: 200, opacity: 0, rotate: 0, delay: 10 },
-      { x: -20, opacity: 1, rotate: 360, duration: 2 }
-    );
-    gsap.fromTo(
-      ".nape",
-      { rotate: -20, y: -200, x: 1000 },
-      { y: 20, x: 0, duration: 5, ease: "power2.out" }
-    );
+    const animateElements = () => {
+      gsap.to(".plates", { rotate: 360, duration: 2 });
+      gsap.fromTo(
+        ".spoon",
+        { x: 200, opacity: 0, rotate: 0, delay: 10 },
+        { x: -20, opacity: 1, rotate: 360, duration: 2 }
+      );
+      gsap.fromTo(
+        ".nape",
+        { rotate: -20, y: -200, x: 1000 },
+        { y: 20, x: 0, duration: 5, ease: "power2.out" }
+      );
+    };
+
+    animateElements();
   }, []);
 
   const maskStyle: React.CSSProperties = {

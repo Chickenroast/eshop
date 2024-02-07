@@ -1,10 +1,15 @@
 import React from "react";
 import "./App.css";
+import { gsap } from "gsap";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Shop from "./pages/Shop";
 import Blog from "./pages/Blog";
+
+gsap.config({
+  nullTargetWarn: false,
+});
 
 const App: React.FC = () => {
   return (
